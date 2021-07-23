@@ -4,6 +4,8 @@ int sub(int a[19][19])
 {
    int number=0;
    int x[19],y[19]={0,};
+    int fixx=0,fixy=0;
+
    printf("    ");
    for(int n=0;n<=18;n++)
    {
