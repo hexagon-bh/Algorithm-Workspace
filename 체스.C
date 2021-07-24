@@ -22,5 +22,20 @@
 
 int main()
 {
+    //변수
+    int chess[8][8]={0,};
 
+    //출력
+    for(int j=0;j<=7;j++)
+    {
+        for(int i=0;i<=7;i++)
+        {
+            printf("%3d",chess[j][i]);
+        }
+        printf("\n");
+    }
 }
+/*
+    gcc 체스.c
+    ./a.exe
+*/
