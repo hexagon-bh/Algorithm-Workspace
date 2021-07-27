@@ -7,7 +7,6 @@
 int main() 
 
 { 
-
 int com; // 컴퓨터가 낸 값을 저장합니다. 
 
 int user; // 사용자가 낸 값을 저장합니다. 
@@ -32,7 +31,7 @@ printf("(1. 가위 _ 2. 바위 _ 3. 보 _ 0. 종료)\n\n");
 
 printf("입력해주세요 : "); 
 
-scanf_s("%d",&user); 
+scanf("%d",&user); 
 
 if(user > 0 && user < 4) // 사용자가 1~3 값을 입력했을 경우입니다. 
 
