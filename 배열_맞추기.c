@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main()
 {
-    int t;
     int x[5]={2,1,3,4,5};
-    t==x[1];
+    int t=0;
+    t=x[1];
     x[1]=x[0];
     x[0]=t;
 
