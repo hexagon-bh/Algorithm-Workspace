@@ -20,60 +20,36 @@ int main()
 	
 	printf("\n50000원권: %d",op/cash);
 	op=op%cash;
-	if(op<10000)
-	{
-		return 0;
-	}
+
 	cash =10000;
 
 	printf("\n10000원권: %d",op/cash);
 	op=op%cash;
-	if(op<5000)
-	{
-		return 0;
-	}
+
 	cash =5000;
 	printf("\n5000원권: %d",op/cash);
 	op=op%cash;
-	if(op<1000)
-	{
-		return 0;
-	}
+
 	cash =1000;
 	printf("\n1000원권: %d",op/cash);
 		op=op%cash;
-	if(op<500)
-	{
-		return 0;
-	}
+
 	cash =500;
 	printf("\n500원권: %d",op/cash);
 	op=op%cash;
-	if(op<100)
-	{
-		return 0;
-	}
+
 	cash =100;
 	printf("\n100원권: %d",op/cash);
 		op=op%cash;
-	if(op<50)
-	{
-		return 0;
-	}
+
 	cash =50;
 	printf("\n50원권: %d",op/cash);
 		op=op%cash;
-	if(op<10)
-	{
-		return 0;
-	}
+
 	cash =10;
 	printf("\n10원권: %d",op/cash);
 		op=op%cash;
-	if(op<1)
-	{
-		return 0;
-	}
+
 	cash =1;
 	printf("\n1원권: %d",op/cash);
 }
