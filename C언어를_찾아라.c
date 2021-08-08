@@ -33,22 +33,29 @@ int main()
     int C_Count=0;
     int CC_Count=0;
     char value[100];
+    int a=0;
 
     printf("-----------C언어를 찾아라-----------\n");
     printf("문자열을 입력하시오\n(대소문자 상관없음!!! / 100자 이내)\n:");
     scanf("%s",&value);
 
-    while(value[C_Count]!=0)
-    C_Count++;
+    while(value[a]!=0)
+    a++;
     
-    for(int i=0;i<=C_Count;i++)
+    for(int i=0;i<=a;i++)
     {
-        if(value[i]!='c')
-        C_Count--;
+        if(value[i]=='c'||value[i]=='C')
+        {
+            C_Count++;
+            if(value[i+1]=='c' || value[i+1]=='C')
+            {
+                CC_Count++;
+            }
+        }
     }
 
-    printf("%d",C_Count);
-
+    printf("'C'의 개수: %d",C_Count);
+    printf("CC의 개수: %d",CC_Count);
 }
 //gcc C언어를_찾아라.c
 //./a.exe
