@@ -23,7 +23,7 @@ int main()
         // ****원권의 장수
         printf("50000원권: %d장",op/cash);
         //next lv의 거스름돈
-        
+        op=op%cash;
 
         if(lv%2==0)
         {
