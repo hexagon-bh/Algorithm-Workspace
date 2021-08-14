@@ -21,7 +21,7 @@ int main()
 	for(lv=0;lv<=9;lv++)
     {
         // ****원권의 장수
-        printf("50000원권: %d장\n",op/cash);
+        printf("%d원권: %d장\n",cash,op/cash);
         //next lv의 거스름돈
         op=op%cash;
 
@@ -33,6 +33,5 @@ int main()
         {
             cash=cash/2;
         }
-    }
-	
+    }	
 }
