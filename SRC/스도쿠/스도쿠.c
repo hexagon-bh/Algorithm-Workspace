@@ -159,11 +159,6 @@ int main()
                     }
 
                 }
-                for(int gf=0;gf<=8;gf++)
-                {
-                    printf("%d",candidate[gf][count]);
-                }
-                printf("\n");
                 
                 int n=0;
                 int temp[9]={0,};
@@ -183,6 +178,7 @@ int main()
                         n++;
                     }
                 }
+                //가능한 수
                 for(int vm=0;vm<=8;vm++)
                 {
                     candidate[vm][count]=temp[vm];
