@@ -6,11 +6,11 @@ int main()
         int mine=0;
         char mine_c[50];
         int computer=0;
-        int  total,tie,win,lose=0;
+        int  total=0,tie=0,win=0,lose=0;
 
         while(1)
         {
-        printf("----------가위 바위 보_게임----------\n");
+        printf("\n----------가위 바위 보_게임----------\n");
 
         printf("MY: ");
         scanf("%s",&mine_c);
@@ -76,8 +76,18 @@ int main()
          
           total++;
 
-          printf("\n%d판 %d승 %d패 %d무",total,win,lose,tie);
+          printf("\n%d판 %d승 %d패 %d무\n",total,win,lose,tie);
         
-        system("cls"); //reset screen
+        printf("Do you want to continue?[Yes:0 / No:1] ");
+        int next=2;
+        scanf("%d",&next);
+        if(next==0)
+        {
+        	system("cls");
+		}
+		if(next==1)
+		{
+			return 0;
+		}
     }
 }
