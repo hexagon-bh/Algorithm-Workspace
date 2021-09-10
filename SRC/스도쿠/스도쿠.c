@@ -36,7 +36,7 @@ int print(int sdoku[9][9])
 int main()
 {
     int sdoku[9][9] = {0,};
-    int number[9]={1,2,3,4,5,6,7,8};
+    int number[9]={1,2,3,4,5,6,7,8,9};
     int line[9] = {0,};
     int row[9] = {0,};
     int small_box[9] = {0,};
