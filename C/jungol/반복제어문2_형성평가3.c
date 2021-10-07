@@ -11,7 +11,7 @@ int main()
         if(a%5==0)
         {
             value=value+a;
-        }
+        } 
     }
     printf("%d",value);
     return 0;
