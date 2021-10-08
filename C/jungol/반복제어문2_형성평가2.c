@@ -15,7 +15,7 @@ int main()
         b=a;
         a=t;
     }
-
+    
     while(a!=b)
     {
         printf("%d ",a);
