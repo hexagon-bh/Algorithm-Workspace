@@ -3,7 +3,7 @@ int multiplication_table(int number)
 {
     for(int i=1;i<=9;i++)
     {
-        printf("%d * %d = %d\n",number,i,number*i);
+        printf("%d * %d = %d",number,i,number*i);
     }
 }
 int main()
