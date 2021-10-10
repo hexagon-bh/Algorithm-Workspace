@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 int main()
 {
@@ -6,12 +5,18 @@ int main()
     scanf("%d",&a);
     for(int j=1;j<=a;j++)
     {
-    printf("*");
+        for(int i=1;i<=j;i++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
-    printf("\n");
-    for(int z=a;z>=1;z--)
+    for(int o=a-1;o>=1;o--)
     {
-        printf("*");
+        for(int p=o;p>=1;p--)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
-    printf("\n");
 }
