@@ -1,11 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-url="https://comic.naver.com/webtoon/weekday"
+url="https://trends.google.com/trends/trendingsearches/daily?geo=KR"
 res = requests.get(url)
 res.raise_for_status()
 
 soup = BeautifulSoup(res.text,"html.parser")
-category = soup.find("ul",attrs={"class":"category_tab"})
-print(category)
-
+# Rank = soup.find("div",attrs={"class":"ranking_cont"})
+print(soup.find("span"))
