@@ -6,7 +6,7 @@ COORD pos={x,y};
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 int draw_map(){
-    int board[21][12] = {  // 세로 15+1(아래벽)칸, 가로 10+2(양쪽 벽)칸  
+    int board[21][12] = {
 	{1,0,0,0,0,0,0,0,0,0,0,1},
 	{1,0,0,0,0,0,0,0,0,0,0,1},
 	{1,0,0,0,0,0,0,0,0,0,0,1},
