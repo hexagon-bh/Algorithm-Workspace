@@ -5,47 +5,35 @@
 void gotoxy(int x,int y);
 int home();
 int menu();
-int main()
-{
+
+int main(){
     home();
 }
 
-int menu()
-{
+int menu(){
     char menu[50];
     scanf("%s",&menu);
     int compare1 = strcmp(menu,"start");
     int compare2 = strcmp(menu,"rank");
     int compare3 = strcmp(menu,"manual");
     int compare4 = strcmp(menu,"option");
-    if(compare1 != 0 || compare2 != 0 || compare3 != 0 || compare4 != 0 )
-    {
-        system("cls");
-        home();
+    int compare5 = strcmp(menu,"q");
+    if(compare1==0){//start
     }
-    if(compare1==0)//start
-    {
-        system("cls");
-        printf("s");
+    else if(compare2==0){//rank
     }
-    if(compare2==0)//rank
-    {
-        system("cls");
-        printf("r");
+    else if(compare3==0){//manual
     }
-    if(compare3==0)//manual
-    {
-        system("cls");
-        printf("m");
+    else if(compare4==0){//option
     }
-    if(compare4==0)//option
-    {
-        system("cls");
-        printf("o");
+    else if(compare5==0){//quit
+        return 0;
+    }
+    else{
+    home();
     }
 }
-int home()
-{
+int home(){
     //TITLE
     gotoxy(5,3);
     printf("□   ■ □ □ ○   ■ ■ □ □ ■ ■ □ □ □ ☆ ■");
@@ -57,7 +45,6 @@ int home()
     printf("□ ■ ■ ■ □ ■ □ ■   ■ ■ ■ □ □ ■ □ □ ■");
     gotoxy(5,7);
     printf("■   □ ◇ □ ■ ■ ■ □ ■   □ ■   ※ □ ■ □");
-
     //MENU
     gotoxy(25,10);
     printf("<<START>>");
@@ -78,15 +65,13 @@ int home()
     printf("  P   : DOWN");
     gotoxy(5,14);
     printf("  Q   : QUIT");
-
     //command
     gotoxy(5,16);
     printf(">>");
     menu();
 }
 
-void gotoxy(int x,int y)
-{
+void gotoxy(int x,int y){
 COORD pos={x,y};
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
