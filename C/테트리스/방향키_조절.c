@@ -6,7 +6,7 @@ int main(){
 int x=1,y=1;
 gotoxy(x,y);
 while(1){
-if(GetAsyncKeyState(VK_UP)){
+if(GetAsyncKeyState(VK_SPACE)){
 y--;
 Sleep(0.3);
 }
