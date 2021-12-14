@@ -4,7 +4,7 @@
 void gotoxy(int x,int y);
 int main(){
 int x=1,y=1;
-gotoxy(x,y)
+gotoxy(x,y);
 while(1){
 if(GetAsyncKeyState(VK_SPACE)){
 y--;
