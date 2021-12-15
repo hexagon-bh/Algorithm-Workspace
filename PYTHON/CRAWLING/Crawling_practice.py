@@ -7,5 +7,5 @@ res.raise_for_status()
 
 soup= BeautifulSoup(res.text, 'lxml')
 
-h=soup.select("body>ytd-app")
+h=soup.find_all("a",attrs={"class":"yt-simple-endpoint style-scope ytd-grid-video-renderer"})
 print(h)
