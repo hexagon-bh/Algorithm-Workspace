@@ -7,80 +7,61 @@ root.resizable(False,False)
 pr=Label(root,text=" ")
 pr.grid(row=0,column=0,columnspan=4)
 
-number=0
-add=0
-digits=0
+now=0
 
+def now10():
+    global now
+    now=now*10
 def prbt1():
-    global digits,number,add
-    number=pow(10,digits)*1
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+1
+    pr. config(text=now)
 def prbt2():
-    global digits,number,add
-    number=pow(10,digits)*2
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+2
+    pr. config(text=now)
 def prbt3():
-    global digits,number,add
-    number=pow(10,digits)*3
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+3
+    pr. config(text=now)
 def prbt4():
-    global digits,number,add
-    number=pow(10,digits)*4
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+4
+    pr. config(text=now)
 def prbt5():
-    global digits,number,add
-    number=pow(10,digits)*5
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+5
+    pr. config(text=now)
 def prbt6():
-    global digits,number,add
-    number=pow(10,digits)*6
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+6
+    pr. config(text=now)
 def prbt7():
-    global digits,number,add
-    number=pow(10,digits)*7
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+7
+    pr. config(text=now)
 def prbt8():
-    global digits,number,add
-    number=pow(10,digits)*8
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+8
+    pr. config(text=now)
 def prbt9():
-    global digits,number,add
-    number=pow(10,digits)*9
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+9
+    pr. config(text=now)
 def prbt0():
-    global digits,number,add
-    number=pow(10,digits)*0
-    digits=digits+1
-    number=add+number
-    add=number
-    pr.config(text=number)
+    global now
+    now10()
+    now=now+0
+    pr. config(text=now)
 
 
 number1=Button(root,padx=20,pady=15,fg="black",bg="white",relief="groove",borderwidth=0, text='1',command=prbt1)
