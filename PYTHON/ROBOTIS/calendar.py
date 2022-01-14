@@ -8,8 +8,10 @@ window=tkinter.Tk()
 window.title("CALENDAR")
 window.geometry("600x500")
 #현재 년,월
-years=datetime.today().year
-Month=datetime.today().month
+# years=datetime.today().year
+# Month=datetime.today().month
+years=1
+Month=1
 #(월) 1일 요일 구하기
 dates=[" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "]
 def f_month_1():
