@@ -7,11 +7,14 @@ from tkinter.font import BOLD
 window=tkinter.Tk()
 window.title("CALENDAR")
 window.geometry("600x500")
+#일정 추가
+def spawn_sub():
+    sub=tkinter.Tk()
+    sub.title("일정 추가")
+    sub.geometry('500x300')
 #현재 년,월
-# years=datetime.today().year
-# Month=datetime.today().month
-years=1
-Month=1
+years=datetime.today().year
+Month=datetime.today().month
 #(월) 1일 요일 구하기
 dates=[" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "]
 def f_month_1():
@@ -138,6 +141,8 @@ def re_date():
     date41.grid(row=10,column=6)
     date42=tkinter.Button(date,text=dates[41],font=("Arial",20),width=3,height=0)
     date42.grid(row=10,column=7)
+    sub_spawn_button=tkinter.Button(date,text="+",font=("Arial",20),width=3,height=0,command=spawn_sub)
+    sub_spawn_button.grid(row=10,column=8)
 re_date()
 #top_2
 def up():
