@@ -13,13 +13,13 @@ number=set(number)
 for j in range(9):
     for i in range(9):
         if sdoku[j][i]==0:
-            t=set(sdoku[1])
+            t=set(sdoku[j])
             candidate=number-t
-            # y=j
-            # solo=[]
-            # for y in range(9):
-            #     solo.append(sdoku[y][i])
-            # solo=set(solo)
-            # t=set(candidate)
-            # candidate=t-solo
+            y=j
+            t=[]
+            for y in range(9):
+                t.append(sdoku[y][i])
+            t=set(t)
+            a=set(candidate)
+            candidate=a-t
             print(candidate,"\n")
