@@ -24,4 +24,3 @@ while number_lens>1:
     if ok==True:
         number_lens=len(number)
 print(number)
-    
