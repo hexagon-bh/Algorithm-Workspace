@@ -12,4 +12,3 @@ Welcome to
       The end talk bot learns words as the game progresses,
       and the difficulty increases as the bot learns the words.
                                                       -hyun0810d-
-
