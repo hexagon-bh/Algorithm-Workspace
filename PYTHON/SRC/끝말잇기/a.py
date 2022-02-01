@@ -1,2 +1,2 @@
-word="ga"
-print(word[:1])
+word=[]
+print(len(word))
