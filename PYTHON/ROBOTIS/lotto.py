@@ -32,4 +32,3 @@ if a==6:
     print("1등")
 if a<4:
 	print("꽝")
-
