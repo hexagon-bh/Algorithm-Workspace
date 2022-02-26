@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable</title>
+    <style>
+        td {padding:50px 0 50px 0;text-align: center;border-bottom: 1px solid #cdcdcd}
+        tr:last-child td{border-bottom:none;}
+        tr th:first-child{width:90px;}
+        th{background-color: rgb(4, 255, 255, 0.774);padding:10px 0;}
+        input {margin:20px}
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;margin-top: 50px;">2022 Time Table</h1>
+    <div style="width:100%;">
+    <table style="border:1px solid navy;width:800px;margin:0 auto;border:1px solid #000">
+        <tr>
+            <th>Time</th>
+            <th>월요일</th>
+            <th>화요일</th>
+            <th>수요일</th>
+            <th>목요일</th>
+            <th>금요일</th>
+        </tr>
+        <tr>
+            <th>오전 9시</th>
+            <td>수학</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>오전 10시</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>오전 11시</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>오전 12시</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>오전 1시</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div style="width:100;text-align:center">
+        <input type="button" value="인쇄하기" id="print" onclick="window.print()">
+        <input type="button" value="닫기" id="close" onclick="window.close()">
+    </div>
+    </div>
+</body>
+</html>
