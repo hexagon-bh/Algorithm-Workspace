@@ -6,7 +6,7 @@ from time import sleep
 #chrome selenium
 exist=0
 word=0
-def find_naver():
+def find_navers():
     global exist,word
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
