@@ -31,7 +31,21 @@ def searchData():
             print(addrlist[i])
 
 def modifyData():
-    pass
+    print("#### 수정 ####")
+    modifyname=input("수정 할 이름을 입력하세요>>>")
+    for i, person in enumerate(addrlist):
+        if person["name"]==modifyname:
+            print(addrlist[i])
+            for i,person in enumerate(addrlist):
+                if modifyname ==person["name"]:``
+                    idx=addrlist[i]
+                    print(idx)
+                    name=input("성명입력>>>")
+                    phone=input("전화번호 입력>>>")
+                    addr=input("주소입력>>>")
+                    data_value={"idx":idx,"name":name,"phonenumber":phone,"addr":addr}
+                    addrlist[idx]=data_value
+                    print("데이터수정성공!!")
 def deleteData():
     pass
     
