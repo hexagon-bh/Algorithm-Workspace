@@ -7,7 +7,7 @@ addrlist=[
 idx=3
 def menu():
     print("1.입력 2.출력 3.검색 4.수정 5.삭제 6.종료")
-    no = int(input("선택>>>")
+    no = int(input("선택>>>"))
     return no
 def outputData():
     print("####출력####")
@@ -25,8 +25,11 @@ def inputData():
     print("데이터입력 성공!!")
 def searchData():
     print("#### 검색 ####")
-    searchname=input("검색 할 이름을 입력하세요")
-    index = find_idx
+    searchname=input("검색 할 이름을 입력하세요>>>")
+    for i, person in enumerate(addrlist):
+        if person["name"]==searchname:
+            print(addrlist[i])
+
 def modifyData():
     pass
 def deleteData():
