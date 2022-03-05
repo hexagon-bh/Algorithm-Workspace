@@ -4,16 +4,34 @@ addrlist=[
         {"idx":2,"name":'우수연',"phonenumber":'010-5527-2035',"addr":'노원구'},
         {"idx":3,"name":'이재준',"phonenumber":'010-9045-1833',"addr":'노원구'}
     ]
+idx=3
 def menu():
     print("1.입력 2.출력 3.검색 4.수정 5.삭제 6.종료")
-    no = int(input("선택>>>"))
+    no = int(input("선택>>>")
     return no
 def outputData():
     print("####출력####")
     for i in addrlist:
         print("{: ^3}|{: ^6}|{: ^13}|{: ^9}".format(i["idx"],i["name"],i["phonenumber"],i["addr"]))
 def inputData():
+    print("####입력####")
+    global idx
+    idx += 1
+    name = input("이름입력>>>")
+    phone =input("전화번호 입력>>>")
+    addr = input("주소 입력>>>")
+    data_value={"idx":idx,"name":name,"phonenumber":phone,"addr":addr}
+    addrlist.append(data_value)
+    print("데이터입력 성공!!")
+def searchData():
+    print("#### 검색 ####")
+    searchname=input("검색 할 이름을 입력하세요")
+    index = find_idx
+def modifyData():
     pass
+def deleteData():
+    pass
+    
 factory = [inputData,outputData,searchData,modifyData,deleteData]
 def run(no):
     print("{}번이 선택되었습니다!".format(no))
