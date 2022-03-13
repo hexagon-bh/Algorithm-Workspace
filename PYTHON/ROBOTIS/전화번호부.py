@@ -37,7 +37,7 @@ def modifyData():
         if person["name"]==modifyname:
             print(addrlist[i])
             for i,person in enumerate(addrlist):
-                if modifyname ==person["name"]:``
+                if modifyname ==person["name"]:
                     idx=addrlist[i]
                     print(idx)
                     name=input("성명입력>>>")
