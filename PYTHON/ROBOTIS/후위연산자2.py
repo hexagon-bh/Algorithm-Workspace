@@ -1,5 +1,3 @@
-from hashlib import pbkdf2_hmac
-from multiprocessing.reduction import duplicate
 value=str(input())
 list=value.split()
 ma=len(list)

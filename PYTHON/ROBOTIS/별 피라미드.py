@@ -1,0 +1,4 @@
+a=int(input("스타 피라미드를 몇단으로 만들까요"))
+for a in range(0,a-1):
+    space=7
+    print(" "*space,
