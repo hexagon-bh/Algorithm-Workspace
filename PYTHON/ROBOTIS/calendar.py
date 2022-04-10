@@ -13,7 +13,7 @@ def spawn_sub():
     sub.title("일정 추가")
     sub.geometry('500x300')
 #현재 년,월
-years=datetime.today().yearｘ
+years=datetime.today().year
 Month=datetime.today().month
 #(월) 1일 요일 구하기
 dates=[" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "]
