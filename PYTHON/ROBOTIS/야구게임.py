@@ -16,6 +16,6 @@ for j in range(4):
     if pc[j]==user[j]:
         strike+=1
 if strike<4:
-    print(strike,"스타라이크")
+    print(strike,"스트라이크")
 elif strike==4:
     print("홈런")
