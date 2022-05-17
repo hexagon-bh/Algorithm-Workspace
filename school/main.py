@@ -10,7 +10,7 @@ def main():
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
     # options.add_argument("headless")
-    driver = webdriver.Chrome(executable_path="C:\code\WORKSPACE\school/chromedriver.exe",chrome_options=options)
+    driver = webdriver.Chrome(executable_path="C:/Users/user/Documents/chromedriver.exe",chrome_options=options)
     driver.get(url=url)
     res = driver.page_source
     soup=BeautifulSoup(res,'lxml')
@@ -27,6 +27,7 @@ def main():
         print("날씨가 맑습니다.")
 window=tkinter.Tk()
 window.title("신발 청소기 관리 프로그램")
+window.iconbitmap("shoes.ico")
 title=tkinter.Label(text="블루트스 연결")
 title.pack()
 start= tkinter.Button(window, text="start",command=main)
