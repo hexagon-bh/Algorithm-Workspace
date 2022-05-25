@@ -41,13 +41,13 @@ void loop() {
 
     if (digitalRead(DT) != currentStateCLK) {  // 신호가 다르다면 시계방향 회전
       counter ++;                           // 카운팅 용 숫자 1 증가
-      currentDir ="시계방향 회전";
+      currentDir ="right rotate";
     } else {                                 // 신호가 같다면 반시계방향 회전
       counter --;                         // 카운팅 용 숫자 1 감소
-      currentDir ="반시계 방향 회전";
+      currentDir ="left rotate";
     }
       
-    Serial.print("회전방향: ");             
+    Serial.print("roatation director: ");             
     Serial.print(currentDir);           //회전방향 출력
     Serial.print(" | Counter: ");
     Serial.println(counter);           // 회전 카운팅 출력
@@ -64,7 +64,8 @@ void loop() {
     //버튼이 눌린지 50ms가 지났는지 확인, 즉 버튼이 한번 눌린 후 최소 50 ms는 지나야 버튼이 다시 눌린것으로 감지
     if (millis() - lastButtonPress > 50) {  // 50ms 이상 지났다면 
       value==100;
-      Serial.println("버튼 눌림!");  //버튼 눌림 메시지 출력
+      Serial.println("horn!");  //버튼 눌림 메시지 출력
+      value++;
     }
 
     // 마자막 버튼이 눌린 시간 저장
@@ -77,6 +78,7 @@ void loop() {
      if (driver.send((uint8_t *)msg, strlen(msg))) {
          driver.waitPacketSent();
          Serial.println(msg);
+         Serial.println("It was sent as an RC car.");
       }
      delay(300);
      
