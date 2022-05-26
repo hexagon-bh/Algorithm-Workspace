@@ -40,11 +40,24 @@ void loop() {
     // DT핀의 신호를 확인해서 엔코더의 회전 방향을 확인함.
 
     if (digitalRead(DT) != currentStateCLK) {  // 신호가 다르다면 시계방향 회전
-      counter ++;                           // 카운팅 용 숫자 1 증가
+      if (counter==11){
+        counter==11
+        value=101;
+      }else{
+      counter ++;// 카운팅 용 숫자 1 증가
+      
+      value=counter;
       currentDir ="right rotate";
-    } else {                                 // 신호가 같다면 반시계방향 회전
-      counter --;                         // 카운팅 용 숫자 1 감소
+      }
+    } else {        
+      if (counter==-11){
+        counter==-11
+        value=101;
+      }else{
+      counter --;// 카운팅 용 숫자 1 감소
+      value=counter;
       currentDir ="left rotate";
+      }
     }
       
     Serial.print("roatation director: ");             
@@ -71,7 +84,7 @@ void loop() {
     // 마자막 버튼이 눌린 시간 저장
     lastButtonPress = millis();
   }
-    if (value==101){
+    if (value!=101){
      sprintf(buff,"%d",value); //int to char
      Serial.println(buff);
      const char *msg = buff;
