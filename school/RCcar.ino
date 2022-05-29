@@ -61,6 +61,7 @@ void loop() {
         digitalWrite(7,HIGH);
         digitalWrite(5,LOW);
         digitalWrite(4,HIGH);
+        tone(9,150,300);
   }
   if (data=='Q'){
       digitalWrite(7,LOW);
