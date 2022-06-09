@@ -4,7 +4,7 @@ import time
 py_serial = serial.Serial(
     
     # Window
-    port='COM4',
+    port='COM7',
     
     # 보드 레이트 (통신 속도)
     baudrate=9600,

@@ -7,7 +7,7 @@ from datetime import datetime
 import serial
 import time
 two_hour=[]
-commend=0;
+commend="";
 py_serial=0
 def crawling():
     global four_hour, commend,py_serial
@@ -45,16 +45,17 @@ def crawling():
         commend=1
     elif sum_status==0:
         commend=0
+    print(two_hour)
     py_serial.write(commend.encode())
-    time.sleep(0.1)
-    if py_serial.readable():
-        response=py_serial.readline()
-        print(response[:len(response)-1].decode())
+    # time.sleep(0.1)
+    # if py_serial.readable():
+    #     response=py_serial.readline()
+    #     print(response[:len(response)-1].decode())
 
 def main():
     global py_serial
     print("프로그램 시작")
-    py_serial = serial.Serial(port='COM6',baudrate=9600,)
+    py_serial = serial.Serial(port='COM7',baudrate=9600,)
     crawling()
     old_minute=0
     while True:
@@ -72,3 +73,4 @@ title.pack()
 start= tkinter.Button(window, text="start",command=main)
 start.pack()
 window.mainloop()
+print
