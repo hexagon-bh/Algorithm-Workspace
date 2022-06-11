@@ -21,55 +21,58 @@ def crawling():
     driver.get(url=url)
     res = driver.page_source
     soup=BeautifulSoup(res,'lxml')
-    a=soup.find("p","summary").getText()
-    a=a.split(" ")
-    ok=0
-    weather = a[4]
-    status=0
-    for i in range(0,19):
-        if weather==rain[i]:
-            ok=ok+1
-    if ok==19:
-        print("비가 옵니다.")
-        status=1
-    else:
-        print("날씨가 맑습니다.")
-        status=0
-    if len(two_hour)<12:
-        two_hour.append(status)
-    elif len(two_hour)==12:
-        two_hour.append(status)
-        del two_hour[0]
-    sum_status=sum(two_hour)
-    if sum_status>=1:
-        commend="1"
-    elif sum_status==0:
-        commend="0"
-    print(two_hour)
-    py_serial.write(commend.encode())
-    time.sleep(0.1)
-    if py_serial.readable():
-        response=py_serial.readline()
-        print(response[:len(response)-1].decode())
+    a=soup.find("p","summary")#.getText()
+    print(a)
+crawling()
 
-def main():
-    global py_serial
-    print("프로그램 시작")
-    py_serial = serial.Serial(port='COM3',baudrate=9600,)
-    crawling()
-    old_minute=0
-    while True:
-        today=datetime.now()
-        current_minute=today.minute
-        if current_minute==old_minute+10:
-            crawling()
-        elif old_minute==0 and current_minute==10:
-            crawling()
-        old_minute=current_minute
-window=tkinter.Tk()
-window.title("신발 청소기 관리 프로그램")
-title=tkinter.Label(text="블루트스 연결")
-title.pack()
-start= tkinter.Button(window, text="start",command=main)
-start.pack()
-window.mainloop()
+#     a=a.split(" ")
+#     ok=0
+#     weather = a[4]
+#     status=0
+#     for i in range(0,19):
+#         if weather==rain[i]:
+#             ok=ok+1
+#     if ok==19:
+#         print("비가 옵니다.")
+#         status=1
+#     else:
+#         print("날씨가 맑습니다.")
+#         status=0
+#     if len(two_hour)<12:
+#         two_hour.append(status)
+#     elif len(two_hour)==12:
+#         two_hour.append(status)
+#         del two_hour[0]
+#     sum_status=sum(two_hour)
+#     if sum_status>=1:
+#         commend="1"
+#     elif sum_status==0:
+#         commend="0"
+#     print(two_hour)
+#     py_serial.write(commend.encode())
+#     time.sleep(0.1)
+#     if py_serial.readable():
+#         response=py_serial.readline()
+#         print(response[:len(response)-1].decode())
+
+# def main():
+#     global py_serial
+#     print("프로그램 시작")
+#     py_serial = serial.Serial(port='COM3',baudrate=9600,)
+#     crawling()
+#     old_minute=0
+#     while True:
+#         today=datetime.now()
+#         current_minute=today.minute
+#         if current_minute==old_minute+10:
+#             crawling()
+#         elif old_minute==0 and current_minute==10:
+#             crawling()
+#         old_minute=current_minute
+# window=tkinter.Tk()
+# window.title("신발 청소기 관리 프로그램")
+# title=tkinter.Label(text="블루트스 연결")
+# title.pack()
+# start= tkinter.Button(window, text="start",command=main)
+# start.pack()
+# window.mainloop()
