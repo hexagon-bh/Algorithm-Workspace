@@ -1,4 +1,3 @@
 a=1
-b=2
-c=3
-print(max(a,b,c))
+b=1
+print(max(a,b))
