@@ -66,7 +66,7 @@ void loop() {
     lcd.setCursor(0,0);
     lcd.print("cleaning...");
     uvon();
-      if (data=='0'){
+      if (data=='0'){ //조건:비가 안온다면
         while (n<10) {   //솔 돌리기
           spin1();
           spin2();
