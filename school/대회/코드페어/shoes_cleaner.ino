@@ -37,6 +37,8 @@ void loop() {
   int onoff = 0;
   onoff = digitalRead(onoffbt);
   digitalWrite(offled,HIGH);
+  if (Serial.available()){
+  data=Serial.read();
   if (onoff==LOW) {
     digitalWrite(offled,LOW);
     digitalWrite(onled,HIGH);
@@ -64,9 +66,6 @@ void loop() {
     lcd.setCursor(0,0);
     lcd.print("cleaning...");
     uvon();
-    if (Serial.available()){
-      data=Serial.read();
-
       if (data=='0'){
         while (n<10) {   //솔 돌리기
           spin1();
@@ -75,7 +74,6 @@ void loop() {
           Serial.println(n);
         }
       }
-    }
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("clean end in 5s");
@@ -105,6 +103,7 @@ void loop() {
   }
   else {
     digitalWrite(offled,LOW);
+  }
   }
 }
 
