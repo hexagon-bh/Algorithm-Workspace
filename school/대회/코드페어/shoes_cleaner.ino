@@ -37,7 +37,7 @@ void loop() {
   int onoff = 0;
   onoff = digitalRead(onoffbt);
   digitalWrite(offled,HIGH);
-  if (Serial.available()){
+  if (Serial.available()){  //날씨 데이터 받아오기
   data=Serial.read();
   if (onoff==LOW) {
     digitalWrite(offled,LOW);
