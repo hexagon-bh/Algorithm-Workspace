@@ -17,7 +17,7 @@ def crawling():
     # options = webdriver.ChromeOptions()
     # options.add_experimental_option("excludeSwitches", ["enable-logging"])
     # options.add_argument("headless")
-    driver = webdriver.Chrome(executable_path="C:\code\WORKSPACE\school\대회\chromedriver.exe")#,chrome_options=options
+    driver = webdriver.Chrome(executable_path="C:\code\WORKSPACE\school\대회\코드페어\chromedriver.exe")#,chrome_options=options
     driver.get(url=url)
     res = driver.page_source
     soup=BeautifulSoup(res,'lxml')
@@ -26,7 +26,6 @@ def crawling():
     print(a)
     ok=0
     weather = a[4]
-    weather="맑음"
     print(weather)
     status=0
     for i in range(0,20):
@@ -64,16 +63,18 @@ def main():
         today=datetime.now()
         current_minute=today.minute
         print(current_minute)
-        if current_minute==old_minute+2:
+        if current_minute==old_minute+10:
             crawling()
             old_minute=current_minute
-        elif old_minute==0 and current_minute==2:
-            crawling()
-            old_minute=current_minute
+        elif (old_minute>50 and old_minute<=0):
+            if current_minute==old_minute+10:
+                crawling()
+                old_minute=current_minute
 window=tkinter.Tk()
 window.title("신발 청소기 관리 프로그램")
-title=tkinter.Label(text="블루트스 연결")
+title=tkinter.Label(text="장치 시작")
 title.pack()
 start= tkinter.Button(window, text="start",command=main)
 start.pack()
+
 window.mainloop()
