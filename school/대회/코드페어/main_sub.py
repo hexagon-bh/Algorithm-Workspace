@@ -12,10 +12,10 @@ def crawling():       #크롤링 함수
     global four_hour, commend,py_serial
     print("날씨 크롤링 시작")
     rain=["비","약한비","강한비","비","눈","약한눈","강한눈","진눈깨비","소나기","소낙눈","번개, 뇌우","우박","비 또는 눈","가끔 비","가끔 눈","가끔 비 또는 눈","흐려져 비","흐려져 비(밤)","흐려져 눈","흐려져 눈(밤)"] #비와 관련된 날씨
-    url="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%85%B8%EC%9B%90%EA%B5%AC+%EB%82%A0%EC%94%A8" #크롤링 웹페이지 주소
+    url="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%85%B8%EC%9B%90%EA%B5%AC+%EB%82%A0%EC%94%A8" #크롤린 웹페이지 주소
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    options.add_argument("headless")    #크롤링 인터넷 화면 숨기기
+    options.add_argument("headless")    #크롤린 인터넷 화면 숨기기
     driver = webdriver.Chrome(executable_path="C:\code\WORKSPACE\school\대회\코드페어\chromedriver.exe",chrome_options=options)#driver  주소 설정
     driver.get(url=url)
     res = driver.page_source
@@ -48,10 +48,14 @@ def crawling():       #크롤링 함수
         commend="1"
     elif sum_status==0:
         commend="0"
+
+def send():
+    global commend, 
+    commend="0"
+    commend=commend.encode('utf-8')
+    py_serial.write(commend)
     print(commend)
-    if py_serial.readable():
-        commend=commend.encode('utf-8')
-        py_serial.write(commend)
+    print("송신")
 
 
 
@@ -68,7 +72,8 @@ def main(): #메인 함수
         #현재시간
         today=datetime.now()
         current_minute=today.minute
-        #10분이 지나면 크롤링 실해되는 코드
+        print(current_minute)
+        #10분이 지나면 크롤링 실행되는 코드
         if current_minute==old_minute+3:
             crawling()
             old_minute=current_minute
@@ -84,4 +89,6 @@ title=tkinter.Label(text="장치 시작")
 title.pack()
 start= tkinter.Button(window, text="start",command=main)#장치시작 버튼
 start.pack()
+clean_start=tkinter.Button(window, text="clean start",command=send)
+clean_start.pack()
 window.mainloop()
