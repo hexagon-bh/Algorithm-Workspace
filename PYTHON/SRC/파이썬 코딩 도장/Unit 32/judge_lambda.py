@@ -1,3 +1,0 @@
-files = input().split()
-
-print(                                                                                        )

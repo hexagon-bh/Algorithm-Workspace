@@ -1,7 +1,6 @@
 a=int(input())
 line=[1,1]
 next_line=[]
-
 for i in range(2,a+1):
     next_line=line
     next_line.pop()
