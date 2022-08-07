@@ -1,4 +1,4 @@
-/*
+-/*
 https://editor.p5js.org/krantas/sketches/IKUf43rB
 */
 const modelURL = 'https://teachablemachine.withgoogle.com/models/e1JJAQxBf/';
@@ -32,21 +32,4 @@ function draw() {
     textSize(16);
     textAlign(CENTER);
     text(label, width / 2, height - 4);
-}
-
-function classifyVideo() {
-    flippedVideo = ml5.flipImage(video)
-    classifier.classify(flippedVideo, gotResult);
-    flippedVideo.remove();
-}
-
-function gotResult(error, results) {
-    if (error) {
-        console.error(error);
-        return;
-    }
-    label = String(results[0].label);
-    console.log(label);
-    serial.write(label);
-    classifyVideo();
 }
