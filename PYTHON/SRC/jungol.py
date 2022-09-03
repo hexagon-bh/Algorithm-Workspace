@@ -11,6 +11,7 @@ for i in range(0,3):
         for w in range(paper_coo[i][1],paper_coo[i][1]+10):
             white_paper[w][q]=1
 width=0
+print(white_paper)
 for row in white_paper:
     width+=row.count(1)
 print(width)
