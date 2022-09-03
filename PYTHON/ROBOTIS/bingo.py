@@ -44,6 +44,7 @@ def play_bingo(x,y):
     a=bingo_checker()
     if a==1:
         print("bingo!!!\nturn:%d"%turn)
+        print_table(1)
         return 0
 for i in range(0,5):
     for j in range(0,5):
