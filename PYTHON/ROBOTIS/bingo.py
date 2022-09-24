@@ -34,8 +34,7 @@ def bingo_checker():
     if bingo==3:
         return 1
     if bingo!=3:
-        return 0
-        
+        return 0      
 def play_bingo(x,y):
     for i in range(0,5):
         for j in range(0,5):
