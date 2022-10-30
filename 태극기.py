@@ -18,8 +18,8 @@ t.circle(50,180)
 t.end_fill()
 
 t.penup()
-t.setposition(30,30)
-t.right(60)
+t.setposition(30,40)
+t.right(50)
 t.pendown()
 for i in range(2):
     t.forward(20)
@@ -28,13 +28,13 @@ for i in range(2):
     t.left(90)
 
 t.penup()
-t.setposition(-230,30)
-t.right(60)
-t.right(180)
+t.setposition(-230,40)
+t.right(50)
 t.pendown()
 for i in range(2):
     t.forward(20)
     t.right(90)
     t.forward(100)
     t.right(90)
+
 turtle.mainloop()

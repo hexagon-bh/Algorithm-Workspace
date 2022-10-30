@@ -1,4 +1,4 @@
-ujni4tjpi/mkm m, mx, d,k=map(int,input().split())
+m, mx, d,k=map(int,input().split())
 a=1
 b=2
 arr=[]
