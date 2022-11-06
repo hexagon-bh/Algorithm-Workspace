@@ -1,3 +1,4 @@
+import os
 subject=[0,0,0,0,0,0,0]
 total=0;avg=0;max=0;min=0;
 for i in range(0,7):
@@ -15,7 +16,7 @@ subject.append(avg)
 subject.append(max)
 subject.append(min)
 #그래프 그리기
-print("\n\n")
+os.system("cls")
 print("Total: %d"%total)
 print("Average: %d"%avg)
 print("max: %d"%max)
