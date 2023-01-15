@@ -1,0 +1,5 @@
+a,b=map(int,input().split())
+array=list(map(int,input().split()))
+array.sort(reverse=True)
+print(array)
+print(array[b-1])
