@@ -34,4 +34,3 @@ for i in range(10,0,-1):
             line=line+"  "
     print(line)
 print("   A B C D E F G H I J")
-
