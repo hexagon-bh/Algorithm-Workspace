@@ -31,3 +31,4 @@ if entrence==1:
                 print(name_list[t])
 elif entrence==0:
     print("shutdown")
+    os.system("quit")

@@ -19,7 +19,7 @@ int Sub(int A[5][5])
 		{
 		A[j][i]=d;
 		printf("%3d",A[j][i]);
-		d++;
+		d++
 		}
 		if(j<=2)
 		{
