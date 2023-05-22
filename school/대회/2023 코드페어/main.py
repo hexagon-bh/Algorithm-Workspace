@@ -1,33 +1,30 @@
-# import calendar
-# import datetime
-# import pyttsx3
-# import os #김강현 곰보빵
-# import time
-# import requests
-# from selenium import webdriver
-# from bs4 import BeautifulSoup
-# import tkinter
-# print("Start Program")
-# # engine = pyttsx3.init()
-# # engine.setProperty('rate', 150)
-# # engine.setProperty('volume', 0.9)
-# # engine.say("Start Program")
-# # engine.runAndWait()
-# from gtts import gTTS
-# import os
-# from playsound import playsound
-# tts = gTTS(text='Hello, World!',lang="ko")
-# tts.save('hello.mp3')
-# playsound("hello.mp3")
-import speech_recognition as sr
-#import sys #-- 텍스트 저장시 사용
-
-r = sr.Recognizer()
-
-audio_file = sr.AudioFile("test.wav")
-with audio_file as source:
-    audio = r.record(source)
-
-#sys.stdout = open('stdout.txt', 'w') #-- 텍스트 저장시 사용
-
-print(r.recognize_google(audio))
+import calendar
+import datetime
+import os
+import time
+import requests
+from selenium import webdriver
+from bs4 import BeautifulSoup
+from gtts import gTTS
+import os
+import speech_recognition
+import playsound
+def speak(text, lang="ko",speed=False):
+    tts = gTTS(text=text,lang=lang)
+    tts.save('message.mp3')
+    playsound.playsound("message.mp3")
+r = speech_recognition.Recognizer()
+data=""
+while True:
+    try:
+        with speech_recognition.Microphone() as source:
+            print("mic")
+            r.adjust_for_ambient_noise(source)
+            audio=r.listen(source)
+            data=r.recognize_google(audio,language="ko")
+            print("success recog")
+            print(data)
+    except:
+        r=speech_recognition.Recognizer()
+    if data=="엘리스":
+        speak("안녕하세요")
