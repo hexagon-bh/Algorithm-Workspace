@@ -9,14 +9,15 @@ void setup() {
   Serial.begin(9600);
   servo.attach(8);
   servo.write(angle);
+  //DC 모터 1
     pinMode(7,OUTPUT);
     pinMode(6,OUTPUT);
-    
+    //DC 모터 2
     pinMode(5,OUTPUT);
     pinMode(4,OUTPUT);
-    
+    //부저
     pinMode(9,OUTPUT);
-
+//LED
     pinMode(10,OUTPUT);
     pinMode(11,OUTPUT);
 }
