@@ -66,6 +66,7 @@ void loop(){
       value[v_recog]=1;
     }
     else{
+      //아스키코드를 통한 숫자 변환
       t=(int)data-48;
       value[v_recog]=value[v_recog]*10+t;
       Serial.print(data);
