@@ -1,5 +1,0 @@
-file=open('hello.txt','r',encoding='UTF-8')
-s=file.read()
-star=s.count("별")
-print(star)
-file.close()
