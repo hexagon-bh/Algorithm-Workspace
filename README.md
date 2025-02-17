@@ -1,7 +1,6 @@
 # 🔍 Algorithm Challenges 🚀
 
 Welcome to my algorithm playground! Here you'll find my progress on solving algorithmic challenges 🧠✨. I'm steadily improving and learning new techniques to solve problems more efficiently 💡. 
-
 ---
 
 ## 🌱 Problem Solving Journey
