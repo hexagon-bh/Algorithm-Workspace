@@ -1,24 +1,66 @@
-![Algorithm Repository](https://source.unsplash.com/featured/?coding,algorithm)
+# 🔍 Algorithm Challenges 🚀
 
-# 🚀 알고리즘 문제 풀이 모음 🧩
+Welcome to my algorithm playground! Here you'll find my progress on solving algorithmic challenges 🧠✨. I'm steadily improving and learning new techniques to solve problems more efficiently 💡. 
 
-안녕하세요! 👋 이 레포는 제가 풀어본 알고리즘 문제들을 정리한 공간입니다. 다양한 문제를 풀면서 배우고 성장하는 과정을 기록하고 있어요! 🌱
+---
 
-## 📌 문제 풀이 목록
-| 문제 이름 | 언어 | 알고리즘 | 링크 |
-|-----------|------|---------|------|
-| 🟢 Two Sum | Python | 해시맵 | [바로가기](./solutions/two_sum.py) |
-| 🔵 Binary Search | C++ | 이분 탐색 | [바로가기](./solutions/binary_search.cpp) |
-| 🟡 Dijkstra | Java | 최단 경로 | [바로가기](./solutions/dijkstra.java) |
-| 🔴 N-Queens | JavaScript | 백트래킹 | [바로가기](./solutions/n_queens.js) |
+## 🌱 Problem Solving Journey
 
-📌 **더 많은 문제는 [solutions](./solutions) 폴더에서 확인할 수 있어요!**
+I’m working on various algorithm problems across different difficulty levels! Here’s a look at my journey so far:
 
-## 🔍 사용한 기술
-- **언어**: Python 🐍, C++ 💻, Java ☕, JavaScript 🌐
-- **알고리즘**: 정렬, 탐색, DP, 그래프, 그리디 등 다양한 주제 다루기 🎯
+### 🟢 Easy Problems
+- 📝 **[Two Sum](https://github.com/username/repository)** - A simple problem to practice array manipulation.
+- 📝 **[Reverse String](https://github.com/username/repository)** - Reversing strings using different approaches.
+- 📝 **[Palindrome Check](https://github.com/username/repository)** - Checking if a string is a palindrome.
 
-## 📬 연락
-궁금한 점이나 함께 문제를 풀어보고 싶다면 언제든지 연락 주세요! ✉️
+### 🟠 Medium Problems
+- 📝 **[Merge Intervals](https://github.com/username/repository)** - Sorting and merging intervals efficiently.
+- 📝 **[Subarray Sum](https://github.com/username/repository)** - Finding subarrays that sum to a given number.
 
-> "알고리즘은 문제를 해결하는 힘! 💪"
+### 🔴 Hard Problems
+- 📝 **[Longest Increasing Subsequence](https://github.com/username/repository)** - A more complex problem requiring dynamic programming.
+- 📝 **[Word Ladder](https://github.com/username/repository)** - Finding the shortest transformation sequence from one word to another.
+
+---
+
+## 💡 Concepts I’ve Learned
+
+- **Array Manipulation** 📊
+- **Dynamic Programming** 🔄
+- **Sorting and Searching** 🔍
+- **Graph Traversal** 🌐
+- **Backtracking** ↩️
+
+---
+
+## 🛠️ Tools & Languages Used
+
+- **Programming Language**: Python 🐍 | JavaScript 💻
+- **IDE**: VS Code 🔧
+- **Platform**: LeetCode 💻 | HackerRank 🏆 | Codeforces 🌍
+
+---
+
+## 🚀 Goals
+
+- Continue solving problems from different platforms! 🎯
+- Focus on **Time Complexity** and **Space Complexity** for optimization. ⏱️
+- Start tackling harder problems with **Graph Theory** and **Dynamic Programming**! 🧩
+
+---
+
+## 🤝 Contributions
+
+Feel free to collaborate or suggest new challenges! Let’s solve algorithms together and grow! 💪
+
+---
+
+## 📈 My Progress
+
+[![My GitHub Stats](https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&count_private=true&hide=prs&theme=radical)](https://github.com/your-username)
+
+[![My GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=your-username&theme=radical)](https://github.com/your-username)
+
+---
+
+Thanks for checking out my algorithm journey! Let’s keep learning and growing together! 🌱✨
